@@ -1,16 +1,42 @@
-# 这是一个示例 Python 脚本。
+"""The root file of the backend, contains the main app start entrance"""
+import uvicorn
+import fastapi
+from fastapi.middleware.gzip import GZipMiddleware
+from contextlib import asynccontextmanager
+from starlette.middleware.sessions import SessionMiddleware
+# local
+from app.api import api_router
+from app.core.config import settings
+from app.core.middleware import middlewares
+from app.core.exception import exception_handlers
+from app.core.extension.redis import cli as redisCli
 
-# 按 F5 执行或将其替换为您的代码。
-# 按 双击 Shift 在所有地方搜索类、文件、工具窗口、操作和设置。
+
+@asynccontextmanager
+async def app_lifespan(app: fastapi.FastAPI):
+    redisCli.init_redis_connect()
+    yield
+    await redisCli.close_redis_connect()
 
 
-def print_hi(name):
-    # 在下面的代码行中使用断点来调试脚本。
-    print(f'Hi, {name}')  # 按 Ctrl+F8 切换断点。
+app = fastapi.FastAPI(
+    title=settings.SERVER_NAME,
+    openapi_url=f"{settings.API_V1_STR}/openapi.json",
+    middleware=middlewares,
+    exception_handlers=exception_handlers,
+    lifespan=app_lifespan
+)
 
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+app.add_middleware(SessionMiddleware, secret_key=settings.SESSION_KEY, same_site="none", https_only=True)
+app.include_router(api_router, prefix=settings.API_V1_STR, tags=settings.API_V1_TAG)
 
-# 按装订区域中的绿色按钮以运行脚本。
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
+# Start uvicorn server
+if __name__ == "__main__":
+    uvicorn.run(
+        app="main:app",
+        host=settings.HOST,
+        port=settings.PORT,
+        reload=True,
+        server_header=False,
+    )
