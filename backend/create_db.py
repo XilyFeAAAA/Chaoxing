@@ -11,6 +11,7 @@ async def insert_objects() -> None:
     async with async_session.begin() as session:
         member = Role(code='r100', name='member', description="普通用户")
         admin = Role(code='r200', name='admin', description="管理员")
+        session.add_all([member, admin])
 
 
 async def insert_permission() -> None:

@@ -2,3 +2,18 @@
 [2023-12-11 12:54:49,392] __init__.py->global_exception line:19 02ff7bba-06f6-4362-ac91-1959489335b2 Exception: 'NoneType' object has no attribute 'lower'
 [2023-12-11 13:14:00,516] __init__.py->global_exception line:19 7e9c043f-3fda-4693-a811-1c1be121f778 Exception: Caught handled exception, but response already started.
 [2023-12-11 15:59:42,502] __init__.py->global_exception line:18 930db942-6b3a-4bae-928a-40ebe8c4cc5f Exception: 'NoneType' object has no attribute 'name'
+[2023-12-11 21:35:15,653] __init__.py->global_exception line:18 8c41019c-5289-4f61-a41d-5c9915e3ca37 Exception: Class 'builtins.NoneType' is not mapped
+[2023-12-11 21:35:19,488] __init__.py->global_exception line:18 5ab79c7f-bdfb-48d8-bb54-d7ca0c12e29b Exception: Class 'builtins.NoneType' is not mapped
+[2023-12-11 21:35:29,904] __init__.py->global_exception line:18 04caf2b6-c1d9-44de-b318-d3163d2fcb47 Exception: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`chaoxing`.`table_user`, CONSTRAINT `table_user_ibfk_1` FOREIGN KEY (`role_code`) REFERENCES `table_role` (`code`))')
+[SQL: INSERT INTO table_user (user_id, role_code, email, hashed_password, created_time, deleted) VALUES (%s, %s, %s, %s, %s, %s)]
+[parameters: ('968828670766', 'r100', '2782458700@qq.com', '$2b$12$SnlneXXz2/M9bAGcjNq9leCdfFYyum5g/VSCpaxhnPwkOdswq8436', 1702301729889, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-12-11 21:36:53,984] __init__.py->global_exception line:18 e744b10d-4a08-4383-b8d7-b6ebbcc61c3c Exception: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`chaoxing`.`table_user`, CONSTRAINT `table_user_ibfk_1` FOREIGN KEY (`role_code`) REFERENCES `table_role` (`code`))')
+[SQL: INSERT INTO table_user (user_id, role_code, email, hashed_password, created_time, deleted) VALUES (%s, %s, %s, %s, %s, %s)]
+[parameters: ('845516792473', 'r100', '2782458700@qq.com', '$2b$12$wS5q6eRlYkAusFBqzPTTHuWcBURQReNlhA6JiwooXGs8Ych4h12cW', 1702301813967, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2023-12-11 21:39:37,047] __init__.py->global_exception line:18 c164abdb-88d1-4920-94bc-38081ba2a1a9 Exception: Class 'builtins.NoneType' is not mapped
+[2023-12-11 21:40:04,019] __init__.py->global_exception line:18 aa2850ea-540c-45ca-98a2-655ce6ec9543 Exception: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`chaoxing`.`table_user`, CONSTRAINT `table_user_ibfk_1` FOREIGN KEY (`role_code`) REFERENCES `table_role` (`code`))')
+[SQL: INSERT INTO table_user (user_id, role_code, email, hashed_password, created_time, deleted) VALUES (%s, %s, %s, %s, %s, %s)]
+[parameters: ('679909646402', 'r100', '2782458700@qq.com', '$2b$12$dXyb3c9GNAVWuJBndehJj.DKL1jvTQXffhkfywE2ULv5LRd5ntnRK', 1702302004011, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

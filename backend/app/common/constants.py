@@ -52,11 +52,11 @@ URL_LIVE: str = "https://zhibo.chaoxing.com/saveTimePc"
 # others
 COST_ONCE: float = 1
 # token
-ENNCY_TOKEN: str = "67b3fc8d603d4fc489af1037b968dc5e"
-EVERY_TOKEN: str = "wKahq8krieBbZDbK"
-HEIBOOK_TOKEN: str = "4099239fdfd8765e22720ee75ab7fdb3"
-AIDIAN_TOKEN: str = "LOM9CwAV0BBnPRSKOIZt"
-WANNENG_TOKEN: str = "92D34C44DF"
+ENNCY_TOKEN: str = ""
+EVERY_TOKEN: str = ""
+HEIBOOK_TOKEN: str = ""
+AIDIAN_TOKEN: str = ""
+WANNENG_TOKEN: str = ""
 # question
 CORRECT_THRESHOLD: float = 0.7
 # http
