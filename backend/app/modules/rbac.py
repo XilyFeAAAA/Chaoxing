@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-#-
+import time
 from http import HTTPStatus
 from typing import Union
 from fastapi import HTTPException
@@ -18,22 +19,10 @@ async def get_roles_with_permission(resource: str, method: str) -> list[Role]:
         stmt = select(Role).join(Role.permissions) \
             .filter(Permission.resource == resource) \
             .filter(Permission.method == method) \
-            .filter(Permission.deleted == false()) \
             .filter(Permission.disabled == false())
         roles = (await session.execute(stmt)).scalars().all()
         session.expunge_all()
     return roles
-
-
-async def get_multi(model: Union[Role, Permission], name: str = "", limit: int = 15, cursor: int = 0) -> tuple[list, int]:
-    """query multiple date with pagination and keyword"""
-    stmt_list = select(model).filter(model.name.like(f"%{name}%")).filter(model.deleted == false()).offset(cursor * limit).limit(limit)
-    stmt_count = select(func.count()).filter(model.name.like(f"%{name}%")).filter(model.deleted == false())
-    async with async_session.begin() as session:
-        total = (await session.execute(stmt_count)).scalar()
-        res = (await session.execute(stmt_list)).scalars().all()
-        session.expunge_all()
-    return res, total
 
 
 async def get_role(code: str) -> tuple[Role, Permission]:
@@ -117,3 +106,4 @@ async def update_role(update: RoleUpdateIn) -> Role:
         await session.flush()
         session.expunge(orm_role)
     return orm_role
+

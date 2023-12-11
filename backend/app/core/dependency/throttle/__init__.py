@@ -6,7 +6,7 @@ from fastapi import Request, HTTPException
 # local
 from app.core.config import settings
 from app.utils.string_helper import url_to_resource
-from app.core.extension.redis import cli as redisCli
+from app.extension.redis import cli as redisCli
 
 
 class throttle:

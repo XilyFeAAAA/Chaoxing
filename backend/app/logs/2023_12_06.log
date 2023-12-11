@@ -1,0 +1,31 @@
+[2023-12-06 11:34:13,706] __init__.py->global_exception line:17 93bd814e-f7ed-4adc-9998-debafb6074c6 Exception: No row was found when one was required
+[2023-12-06 12:19:16,565] __init__.py->global_exception line:17 a928397f-38b6-4718-8b50-556a68ae68b5 Exception: Class 'builtins.NoneType' is not mapped
+[2023-12-06 12:20:09,914] __init__.py->global_exception line:17 c632d13e-cbcf-4ded-b429-1264e782e68b Exception: 'str' object has no attribute 'cookie'
+[2023-12-06 12:22:36,173] __init__.py->global_exception line:17 d9770f2e-2cbc-4bc3-9763-aeec0952e2e0 Exception: Multiple rows were found when one or none was required
+[2023-12-06 12:23:35,421] __init__.py->global_exception line:17 012cf78b-e854-4008-884f-cdbe94e6bbb5 Exception: Multiple rows were found when one or none was required
+[2023-12-06 12:25:52,587] __init__.py->global_exception line:17 7134d806-f9ae-4324-bcdb-48d424045065 Exception: Chaoxing_Config.__init__() got an unexpected keyword argument '_sa_instance_state'
+[2023-12-06 12:27:47,097] __init__.py->global_exception line:17 99247d25-6f8b-46cb-a570-3b74b27b20a0 Exception: Chaoxing_Config.__init__() missing 4 required positional arguments: 'exam', 'task', 'sign', and 'searcher'
+[2023-12-06 12:28:26,440] __init__.py->global_exception line:17 dea2dc20-f9fe-4294-8ee8-a717745d6a2e Exception: Chaoxing_Config.__init__() got an unexpected keyword argument 'user_id'
+[2023-12-06 12:29:22,218] __init__.py->global_exception line:17 145cdf58-c0cb-436f-a762-e89becea07c0 Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 12:30:00,295] __init__.py->global_exception line:17 103f2c40-d12b-4f04-8560-c7f318b75585 Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 12:35:45,019] __init__.py->global_exception line:17 74aa7a44-ec87-4d07-895a-1a3712ea1bc2 Exception: 'NoneType' object is not iterable
+[2023-12-06 12:41:03,410] __init__.py->global_exception line:17 46044da4-4955-4de2-936d-08622b57b9e7 Exception: 'NoneType' object is not iterable
+[2023-12-06 12:43:39,214] __init__.py->global_exception line:17 6a4cdaca-c893-4dd0-b37a-0d3b8272a5de Exception: Chaoxing_Config.__init__() missing 4 required positional arguments: 'exam', 'task', 'sign', and 'searcher'
+[2023-12-06 14:08:42,628] __init__.py->global_exception line:17 d509267f-f3e1-41fb-a8a9-8e548b02cdc1 Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 16:21:06,466] __init__.py->global_exception line:17 453ed836-95f8-4298-be45-c1b98d21be7d Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 16:21:34,800] __init__.py->global_exception line:17 0612fda5-e6e8-4036-bc86-f2d78550de55 Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 16:22:03,551] __init__.py->global_exception line:17 50db2937-8bdd-4bf4-96eb-686e65993d5e Exception: Replacement index 1 out of range for positional args tuple
+[2023-12-06 19:33:23,017] __init__.py->global_exception line:17 6bad0d34-02eb-43dd-afb7-b0a98afc8a6f Exception: division by zero
+[2023-12-06 21:31:47,840] __init__.py->global_exception line:18 08796807-2479-49ed-9186-dec11fddf191 Exception: module 'app.modules.user' has no attribute 'get_notification'
+[2023-12-06 21:32:17,520] __init__.py->global_exception line:18 e9f6e2fd-8f70-4e93-81ed-c66e39b1c4dd Exception: module 'app.modules.user' has no attribute 'send_notification'
+[2023-12-06 21:32:39,394] __init__.py->global_exception line:18 971321b5-e294-4fa8-a291-87aa9538f5ea Exception: Caught handled exception, but response already started.
+[2023-12-06 21:38:50,349] __init__.py->global_exception line:18 8a607123-999c-484a-9c24-9a3a43255df6 Exception: Caught handled exception, but response already started.
+[2023-12-06 21:40:04,220] __init__.py->global_exception line:18 5bdf76ab-1a1f-4702-8328-7b5fb4a755ac Exception: Caught handled exception, but response already started.
+[2023-12-06 21:41:31,382] __init__.py->global_exception line:18 b2665edb-969e-4bf2-9e32-e9498748efcb Exception: module 'app.modules.user' has no attribute 'get_notification'
+[2023-12-06 21:47:35,194] __init__.py->global_exception line:18 1a3ced86-2846-44c0-ae93-4f895507e0fe Exception: module 'app.modules.user' has no attribute 'get_notification'
+[2023-12-06 21:52:08,469] __init__.py->global_exception line:18 30c211cc-5d23-4e0b-9f37-48aeb15b113f Exception: module 'app.modules.user' has no attribute 'get_notification'
+[2023-12-06 21:52:40,978] __init__.py->global_exception line:18 6d92f85f-a94e-46ef-b251-b59c36f1ef76 Exception: module 'app.modules.user' has no attribute 'get_notification'
+[2023-12-06 23:22:38,553] __init__.py->global_exception line:18 f40d0d92-bdc6-454b-a666-404ba20d8423 Exception: Object of type CourseOrder is not JSON serializable
+[2023-12-06 23:25:11,524] __init__.py->global_exception line:18 5bdd653b-ef21-4506-8f3f-00892d8209f4 Exception: Object of type CourseOrder is not JSON serializable
+[2023-12-06 23:29:50,168] __init__.py->global_exception line:20 5b9e0174-380e-4d82-b9ff-4bce223789b1 Exception: Object of type CourseOrder is not JSON serializable
+[2023-12-06 23:30:38,881] __init__.py->global_exception line:20 c41b3376-cadf-4df0-97c1-27d1d4ac2580 Exception: Object of type CourseOrder is not JSON serializable

@@ -1,4 +1,3 @@
-"""The root file of the backend, contains the main app start entrance"""
 import uvicorn
 import fastapi
 from fastapi.middleware.gzip import GZipMiddleware
@@ -9,7 +8,7 @@ from app.api import api_router
 from app.core.config import settings
 from app.core.middleware import middlewares
 from app.core.exception import exception_handlers
-from app.core.extension.redis import cli as redisCli
+from app.extension.redis import cli as redisCli
 
 
 @asynccontextmanager
@@ -27,6 +26,7 @@ app = fastapi.FastAPI(
     lifespan=app_lifespan
 )
 
+
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.add_middleware(SessionMiddleware, secret_key=settings.SESSION_KEY, same_site="none", https_only=True)
 app.include_router(api_router, prefix=settings.API_V1_STR, tags=settings.API_V1_TAG)
@@ -37,6 +37,5 @@ if __name__ == "__main__":
         app="main:app",
         host=settings.HOST,
         port=settings.PORT,
-        reload=True,
         server_header=False,
     )

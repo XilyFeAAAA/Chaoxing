@@ -1,0 +1,2 @@
+[2023-12-07 00:00:47,345] __init__.py->global_exception line:19 0e5ca703-c236-4c13-bc7b-528b7ca8a91b Exception: Object of type CourseOrder is not JSON serializable
+[2023-12-07 00:04:59,309] __init__.py->global_exception line:19 2f3cef9b-587f-445a-aef0-67ff89b45a8e Exception: object AsyncResult can't be used in 'await' expression

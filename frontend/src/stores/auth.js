@@ -1,26 +1,28 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import * as storage from '@/common/storage'
+import {getme} from '@/requests/api'
+
 
 export const useAuthStore = defineStore('auth', () => {
-  const isAuth = ref(false)
-  const userInfo = ref({})
-  function login(access_token, refresh_token){
-    isAuth.value = true
-    storage.setAccessToken(access_token)
-    storage.setRefreshToken(refresh_token)
-  }
+    const isAuth = ref(false)
+    const user = ref({})
+    function login(info) {
+        isAuth.value = true
+        user.value = info
+    }
 
-  function setInfo(info){
-    isAuth.value = true
-    userInfo.value = info
-  }
-  function logout(){
-    isAuth.value = false
-    userInfo.value = {}
-    storage.removeAccessToken()
-    storage.removeRefreshToken()
-  }
+    function logout() {
+        isAuth.value = false
+        user.value = {}
+    }
 
-  return { isAuth, userInfo, login, logout, setInfo}
+    function handleGetMe() {
+        getme().then((res) => {
+            user.value = res.data.data
+        })
+    }
+
+    return { isAuth, user, login, logout, handleGetMe }
+},{
+  persist: true
 })

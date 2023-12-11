@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-#-
+import asyncio
 from typing import Annotated
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, BackgroundTasks
 # local
 from app.models import User
 from app.schemas.request import PaginationIn
@@ -9,7 +10,7 @@ from app.schemas.response import UserOut, PaginationOut, UserInfoOut
 from app.core.middleware import logMiddleware
 from app.core.dependency import permission_required, captcha_required, throttle, login_required, paginated_params
 from app.core.response import CustomizeApiResponse
-from app.core.extension.scheduler import scheduler
+from app.extension.scheduler import scheduler
 
 router = APIRouter(route_class=logMiddleware)
 
@@ -42,7 +43,7 @@ async def throttle_test() -> CustomizeApiResponse:
 @router.get("/action-with-pagination", response_model=PaginationOut[UserInfoOut])
 async def pagination_test(current_user: Annotated[User, Depends(login_required)], pagination: Annotated[PaginationIn, Depends(paginated_params)]) -> CustomizeApiResponse:
     """test function related to pagination"""
-    res = PaginationOut(size=10, total=100, items=[UserInfoOut.model_validate(current_user.info)])
+    res = PaginationOut(size=10, total=100, items=[UserInfoOut.model_validate(current_user.userinfo)])
     return CustomizeApiResponse(data=res)
 
 
@@ -62,3 +63,17 @@ async def schedule_test() -> CustomizeApiResponse:
     await async_schedule_test()
     await sync_schedule_test()
     return CustomizeApiResponse()
+
+
+async def exc():
+    print("准备出错")
+    await asyncio.sleep(3)
+    print("出错")
+    print(1/0)
+
+
+@router.get('/action-with-exception')
+async def exception_test(backgrounds: BackgroundTasks) -> CustomizeApiResponse:
+    backgrounds.add_task(exc)
+    return CustomizeApiResponse()
+

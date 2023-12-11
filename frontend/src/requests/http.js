@@ -1,11 +1,11 @@
 import axios from 'axios'
-import router from "@/router";
+import router from '@/router'
 import * as constants from '@/common/constant'
-import * as storage from '@/common/storage'
-import {ElLoading, ElNotification} from 'element-plus'
+import { ElLoading } from 'element-plus'
+import {useAuthStore} from "@/stores";
 
-let authStore = null
 let loading = null
+let authStore = null
 
 const startLoading = () => {
     loading = ElLoading.service({
@@ -34,8 +34,6 @@ instace.interceptors.request.use(
         if (config.showLoading) {
             startLoading()
         }
-        let access_token = storage.getAccessToken()
-        if (access_token !== null) config.headers[constants.AUTH] = "Bearer " + access_token
         return config
     },
     (err) => {
@@ -47,29 +45,21 @@ instace.interceptors.request.use(
 // 响应拦截器
 instace.interceptors.response.use(
     async (response) => {
-        let res = response.data
         endLoading()
         return response
     },
     (err) => {
+        if (authStore === null) {
+            authStore = useAuthStore()
+        }
         endLoading()
         if (err.response) {
             switch (err.response.status) {
                 case 401:
-                    ElNotification({
-                        title: 'Warning',
-                        message: '身份验证失败',
-                        type: 'warning',
-                    })
-                    router.push('login')
-                    break
-                case 403:
-                    // 双token
-                    ElNotification({
-                        title: 'Warning',
-                        message: '登陆过期',
-                        type: 'warning',
-                    })
+                    if (err.response.data.detail === 'invalid_token') {
+                        authStore.logout()
+                        router.push({ name: 'login' })
+                    }
                     break
             }
         }

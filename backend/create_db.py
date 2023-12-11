@@ -9,10 +9,8 @@ from app.core.db.base.engine import async_engine, async_session
 
 async def insert_objects() -> None:
     async with async_session.begin() as session:
-        session.add_all([
-            Role(name="admin", code="r100", description="管理员"),
-            User(role_id=1, user_id="123456789123", email="2782458700@qq.com", hashed_password="$2b$12$aUh2pemEOHhnvswho3gdn.jcBU6W6.xYTDfG45k9PHpAmtrztmThK"),
-        ])
+        member = Role(code='r100', name='member', description="普通用户")
+        admin = Role(code='r200', name='admin', description="管理员")
 
 
 async def insert_permission() -> None:

@@ -13,13 +13,15 @@ class Course(Base):
     """orm course table"""
 
     id: Mapped[intpk]
-    user_id: Mapped[str] = mapped_column(String(constants.USER_ID_LENGTH), ForeignKey("table_user.user_id"), nullable=False)
-    account_id: Mapped[int] = mapped_column(BigInteger, ForeignKey("table_account.id"), nullable=True)
-    name: Mapped[str] = mapped_column(String(100), nullable=False)
-    course_id: Mapped[str] = mapped_column(String(100), nullable=False)
+    course_id: Mapped[str] = mapped_column(String(100), index=True, nullable=False)
+    account_id: Mapped[str] = mapped_column(String(constants.ACCOUNT_ID_LENGTH), ForeignKey("table_account.account_id"))
+    user_id: Mapped[str] = mapped_column(String(constants.USER_ID_LENGTH), nullable=False)
+    course_name: Mapped[str] = mapped_column(String(100), nullable=False)
     class_id: Mapped[str] = mapped_column(String(100), nullable=False)
-    url: Mapped[str] = mapped_column(String(100), nullable=False)
-    cpi: Mapped[str] = mapped_column(String(100), nullable=False)
-    author: Mapped[str] = mapped_column(String(100), nullable=False)
+    url: Mapped[str] = mapped_column(String(200), nullable=False)
+    img_url: Mapped[str] = mapped_column(String(100), nullable=False)
+    classroom: Mapped[str] = mapped_column(String(100), nullable=False)
+    start_time: Mapped[str] = mapped_column(String(100), nullable=False)
+    is_open: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    course_teacher: Mapped[str] = mapped_column(String(100), nullable=False)
     account: Mapped['Account'] = relationship('Account', back_populates='courses')
-    deleted: Mapped[bool] = mapped_column(Boolean, default=False)

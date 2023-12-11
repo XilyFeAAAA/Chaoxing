@@ -21,6 +21,8 @@ class ApiResponse(JSONResponse):
         if data:
             if isinstance(data, BaseModel):
                 self.data = jsonable_encoder(data)
+            elif isinstance(data, list):
+                self.data = [jsonable_encoder(item) for item in data]
             else:
                 self.data = data
         if http_status_code:

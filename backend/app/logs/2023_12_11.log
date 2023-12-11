@@ -1,0 +1,4 @@
+[2023-12-11 12:26:14,304] __init__.py->global_exception line:19 8ab395af-246c-41e8-be68-996890f15418 Exception: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+[2023-12-11 12:54:49,392] __init__.py->global_exception line:19 02ff7bba-06f6-4362-ac91-1959489335b2 Exception: 'NoneType' object has no attribute 'lower'
+[2023-12-11 13:14:00,516] __init__.py->global_exception line:19 7e9c043f-3fda-4693-a811-1c1be121f778 Exception: Caught handled exception, but response already started.
+[2023-12-11 15:59:42,502] __init__.py->global_exception line:18 930db942-6b3a-4bae-928a-40ebe8c4cc5f Exception: 'NoneType' object has no attribute 'name'

@@ -26,7 +26,8 @@ class Settings(BaseSettings):
     CRYPT_SCHEMAS: list[str] = ["bcrypt"]
     CRYPT_DEPRECATED: str = "auto"
     ALGORITHM: str = "HS256"
-    SECRET_KEY: str = secrets.token_urlsafe(32)
+    SECRET_KEY: str = "ySOmwafhQ9H6lroLtS4S8wZnTBrKc96j5x71lDeHuOs"
+    # SECRET_KEY: str = secrets.token_urlsafe(32)
     SESSION_KEY: str = secrets.token_urlsafe(32)
     # db
     MYSQL_HOST: str = "127.0.0.1"

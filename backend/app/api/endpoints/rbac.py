@@ -18,14 +18,6 @@ from app.core.response import CustomizeApiResponse, ApiResponse
 router = APIRouter(route_class=logMiddleware)
 
 
-@router.get('/roles', response_model=PaginationOut[RoleOut])
-async def get_roles(pagination: Annotated[PaginationIn, Depends(paginated_params)]) -> ApiResponse:
-    """get data of all roles with pagination"""
-    roles, total = await modules.rbac.get_multi(model=Role, cursor=pagination.cursor, limit=pagination.limit)
-    res = PaginationOut(size=len(roles), total=total, items=[RoleOut.model_validate(role) for role in roles])
-    return CustomizeApiResponse(data=res)
-
-
 @router.get('/role/{code}', response_model=RoleDetailOut)
 async def get_role_info(code: str) -> ApiResponse:
     """get data of certain role with its permissions"""
@@ -54,14 +46,6 @@ async def del_roles(codes: Annotated[list[str], Body(embed=True, description="co
     """delete roles in batches"""
     count = await modules.rbac.del_roles(codes)
     return CustomizeApiResponse(data=ResultOut(rows=count))
-
-
-@router.get('/permissions', response_model=PaginationOut[PermissionOut])
-async def get_roles(pagination: Annotated[PaginationIn, Depends(paginated_params)]) -> ApiResponse:
-    """get data of all permissions with pagination"""
-    permissions, total = await modules.rbac.get_multi(model=Permission, cursor=pagination.cursor, limit=pagination.limit)
-    res = PaginationOut(size=len(permissions), total=total, items=[PermissionOut.model_validate(permission) for permission in permissions])
-    return CustomizeApiResponse(data=res)
 
 
 @router.post('/permission/disable', response_model=ResultOut)

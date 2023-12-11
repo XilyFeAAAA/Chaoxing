@@ -1,3 +1,0 @@
-[2023-11-28 19:05:16,852] __init__.py->global_exception line:17 b3bf9b4a-4009-44bc-96b3-6dc1f578f1c3 Exception: Response.set_cookie() missing 1 required positional argument: 'key'
-[2023-11-28 19:33:49,871] __init__.py->global_exception line:17 535f5ffa-ecd9-4f99-8523-fd12e0777269 Exception: module 'app.common.constants' has no attribute 'REFRESH_TOKEN_EXPIRE_MINUTES'
-[2023-11-28 20:27:53,593] __init__.py->global_exception line:17 f61a523d-a46f-4c84-bd76-9879e00f561d Exception: Not enough segments

@@ -4,3 +4,5 @@ from . import auth
 from . import user
 from . import rbac
 from . import chaoxing
+from . import notification
+from . import admin

@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-#-
 from typing import Optional
 from pydantic import BaseModel
+from datetime import datetime
 
 
 class UserInfoOut(BaseModel):
     nickname: Optional[str] = None
-    sex: Optional[int] = None
-    created_time: Optional[int] = None
+    money: Optional[float] = None
 
     class Config:
         from_attributes = True
@@ -16,7 +16,9 @@ class UserInfoOut(BaseModel):
 class UserOut(BaseModel):
     user_id: Optional[str] = None
     email: Optional[str] = None
-    info: Optional[UserInfoOut] = None
+    userinfo: Optional[UserInfoOut] = None
+    created_time: Optional[int] = None
 
     class Config:
         from_attributes = True
+

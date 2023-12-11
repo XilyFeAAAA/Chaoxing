@@ -1,0 +1,60 @@
+.el-table__body tr:hover > td.el-table__cell,
+.el-table__body tr.current-row > td.el-table__cell {
+    background-color: #e6f0f9 !important;
+}
+
+.el-tabs__content {
+    display: none;
+}
+
+.el-menu {
+    border: 0 !important;
+}
+
+.el-popover.el-popper {
+    min-width: 0 !important;
+    padding: 0 !important;
+}
+
+.el-menu {
+    color: rgba(255, 255, 255) !important;
+    background-color: #001529 !important;
+}
+
+.el-sub-menu .el-sub-menu__title {
+    color: rgba(255, 255, 255, 0.7);
+    &:hover {
+        background-color: #001529 !important;
+    }
+}
+
+.el-menu-item,
+//设置一级菜单和二级菜单的背景颜色
+.el-sub-menu .el-menu-item {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+//设置选鼠标指针浮动在一级菜单的设置
+.el-menu-item:hover {
+    color: #fff !important;
+    background-color: #001529 !important;
+}
+//设置当前被选中的一级菜单
+.el-menu-item.is-active {
+    color: #fff !important;
+}
+
+.el-card__header {
+    display: flex;
+    align-items: center;
+    padding:  0 20px !important;
+    height: 50px;
+    div {
+        width: 100%;
+    }
+}
+
+.el-card__body {
+    padding: 0 !important;
+  }
+
+

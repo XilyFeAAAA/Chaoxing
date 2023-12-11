@@ -9,6 +9,7 @@ class PermissionOut(BaseModel):
     resource: str
     method: str
     description: str
+    disabled: bool
 
     class Config:
         from_attributes = True

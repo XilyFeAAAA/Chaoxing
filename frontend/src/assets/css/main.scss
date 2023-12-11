@@ -1,0 +1,34 @@
+@import './base.css';
+@import './element.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: ChaoXing-1;
+    src: url('../fonts/font-1.woff2') format('woff2');
+}
+@font-face {
+    font-family: ChaoXing-2;
+    src: url('../fonts/font-2.woff2') format('woff2');
+}
+
+#app {
+    font-family: ChaoXing-2, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    user-select: none;
+}
+
+.btn {
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsla(0, 0%, 95%);
+    }
+}

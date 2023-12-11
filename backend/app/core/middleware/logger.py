@@ -7,7 +7,7 @@ from typing import Callable
 from starlette.requests import Request
 from starlette.responses import Response
 from fastapi.routing import APIRoute
-from app.core.extension.logger import logger
+from app.extension.logger import logger
 
 
 class logMiddleware(APIRoute):

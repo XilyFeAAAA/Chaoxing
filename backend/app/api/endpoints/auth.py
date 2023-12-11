@@ -4,14 +4,14 @@ from typing import Annotated
 from datetime import datetime
 from http import HTTPStatus
 from datetime import timedelta
-from fastapi.security import OAuth2PasswordRequestForm
-from fastapi import APIRouter, HTTPException, Request, Response, Depends
+from fastapi import APIRouter, HTTPException, Request, Response, Depends, Body
 
 # local
 from app import modules
 from app.models import User
 from app.common import constants
-from app.schemas.response import AccessTokenOut, RefreshTokenOut
+from app.schemas.request import LoginIn
+from app.schemas.response import UserOut
 from app.core.security import create_token
 from app.core.dependency import login_required
 from app.core.middleware import logMiddleware
@@ -20,27 +20,24 @@ from app.core.response import CustomizeApiResponse, ApiResponse
 router = APIRouter(route_class=logMiddleware)
 
 
-@router.post("/access-token")
-async def login_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+@router.post("/access-token", response_model=UserOut)
+async def login_access_token(form_data: Annotated[LoginIn, Body()]):
     """OAuth2: get an access token for further requests
     In the production environment, use `return CustomizeApiResponse` instead of another one
     """
-    user = await modules.auth.authenticate(account=form_data.username, password=form_data.password)
+    user = await modules.auth.authenticate(account=form_data.email, password=form_data.password)
     if user is None:
         raise HTTPException(status_code=HTTPStatus.UNAUTHORIZED)
-    access_token = await create_token(user.user_id, expire_delta=timedelta(minutes=constants.ACCESS_TOKEN_EXPIRE_MINUTES))
-    refresh_token = await create_token(user.user_id, expire_delta=timedelta(minutes=constants.REFRESH_TOKEN_EXPIRE_MINUTES))
-    return {"access_token": access_token, "token_type": 'bearer'}
-    # return CustomizeApiResponse(data=AccessTokenOut(access_token=access_token, refresh_token=refresh_token, token_type="bearer"))
-
-
-@router.post("/refresh-token", response_model=RefreshTokenOut)
-async def refresh(current_user: Annotated[User, Depends(login_required)]):
-    """generate short-live token
-    When access-token(short-live) expired, refresh-token can be used to generate a new access-token
-    """
-    access_token = await create_token(current_user.user_id, expire_delta=timedelta(minutes=constants.ACCESS_TOKEN_EXPIRE_MINUTES))
-    return CustomizeApiResponse(data=RefreshTokenOut(access_token=access_token, token_type="bearer"))
+    access_token = await create_token(user.user_id)
+    response = CustomizeApiResponse(data=UserOut.model_validate(user))
+    response.set_cookie(
+        key="access-token",
+        value=access_token,
+        max_age=constants.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        samesite="none",
+        secure=True
+    )
+    return response
 
 
 # TODO: 图形验证码接口限流

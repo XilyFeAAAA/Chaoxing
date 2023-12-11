@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e41eb38a-98ee-49c6-91b9-c6b3bc5b5538" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/app/extension/chaoxing/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/chaoxing.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/chaoxing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/rbac.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/rbac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/dependency/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/dependency/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/dependency/pagination/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/dependency/pagination/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/dependency/throttle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/dependency/throttle/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/exception/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/exception/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/extension/chaoxing/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/extension/logger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extension/logger/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/extension/redis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extension/redis/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/extension/scheduler/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extension/scheduler/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/middleware/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/middleware/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/response/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/response/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/security/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/security/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/logs/2023_11_28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/logs/2023_11_29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chaoxing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chaoxing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chaoxing/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chaoxing/account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chaoxing/course.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chaoxing/course.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/chaoxing.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/chaoxing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/rbac.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/rbac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/request/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/request/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/request/chaoxing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/request/chaoxing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/request/chaoxing/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/request/chaoxing/account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/request/pagination/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/request/pagination/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/response/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/response/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/response/chaoxing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/response/chaoxing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/response/chaoxing/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/response/chaoxing/account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/response/rbac/permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/response/rbac/permission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/response/user/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/response/user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/string_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/string_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dev.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/common/storage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/requests/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/requests/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/requests/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/requests/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/stores/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/stores/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/stores/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/stores/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/dashboard/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/dashboard/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YoC90rWLBLY1ELnfTTwYgsT36F" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/27824/Desktop/chaoxing.sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\coding\github\Chaoxing\backend\app\core\extension\chaoxing\Searcher" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\coding\github\Chaoxing\backend\app\extension\chaoxing" />
+      <recent name="E:\coding\github\Chaoxing\backend\app\extension\chaoxing\Searcher" />
+      <recent name="E:\coding\github\Chaoxing\backend\app\extension\chaoxing\Searcher\library" />
+      <recent name="E:\coding\github\Chaoxing\backend\app" />
+      <recent name="E:\coding\github\Chaoxing\backend\app\models\chaoxing" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.database">
+    <configuration name="database" type="PythonConfigurationType" factoryName="Python">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="E:\coding\github\Chaoxing\backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.database" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="e41eb38a-98ee-49c6-91b9-c6b3bc5b5538" name="更改" comment="" />
+      <created>1701182389676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701182389676</updated>
+      <workItem from="1701182390739" duration="7185000" />
+      <workItem from="1701234190619" duration="6296000" />
+      <workItem from="1701247749730" duration="4489000" />
+      <workItem from="1701254841200" duration="8968000" />
+      <workItem from="1701265872838" duration="6000" />
+      <workItem from="1701265961214" duration="4361000" />
+      <workItem from="1701275477268" duration="228000" />
+      <workItem from="1701317713910" duration="19959000" />
+      <workItem from="1701341529270" duration="4587000" />
+      <workItem from="1701354932788" duration="47693000" />
+      <workItem from="1701446331662" duration="706000" />
+      <workItem from="1701483183399" duration="11060000" />
+      <workItem from="1701526357587" duration="1266000" />
+      <workItem from="1701527662683" duration="9683000" />
+      <workItem from="1701537820705" duration="25923000" />
+      <workItem from="1701613137339" duration="14289000" />
+      <workItem from="1701663286264" duration="5636000" />
+      <workItem from="1701672045745" duration="713000" />
+      <workItem from="1701673043404" duration="937000" />
+      <workItem from="1701680599815" duration="2074000" />
+      <workItem from="1701687200310" duration="4240000" />
+      <workItem from="1701693553940" duration="4022000" />
+      <workItem from="1701698400267" duration="9555000" />
+      <workItem from="1701748140127" duration="34364000" />
+      <workItem from="1701830460509" duration="44051000" />
+      <workItem from="1701920220496" duration="755000" />
+      <workItem from="1701933390524" duration="12088000" />
+      <workItem from="1701959687733" duration="161000" />
+      <workItem from="1702005844394" duration="11229000" />
+      <workItem from="1702030513399" duration="4832000" />
+      <workItem from="1702096518144" duration="6713000" />
+      <workItem from="1702126088484" duration="7109000" />
+      <workItem from="1702138928332" duration="3443000" />
+      <workItem from="1702174395512" duration="1890000" />
+      <workItem from="1702185525358" duration="17476000" />
+      <workItem from="1702211965967" duration="707000" />
+      <workItem from="1702213230925" duration="1609000" />
+      <workItem from="1702215439163" duration="3820000" />
+      <workItem from="1702221933515" duration="876000" />
+      <workItem from="1702224730554" duration="4107000" />
+      <workItem from="1702265674360" duration="15282000" />
+      <workItem from="1702286256105" duration="7000" />
+      <workItem from="1702286336124" duration="628000" />
+      <workItem from="1702290132462" duration="12000" />
+      <workItem from="1702299448727" duration="51000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/core/exception/__init__.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/utils/sql_helper.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/backend$1.coverage" NAME="1 覆盖结果" MODIFIED="1702127256598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backend$chaoxing.coverage" NAME="chaoxing 覆盖结果" MODIFIED="1701187643698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/api/endpoints" />
+    <SUITE FILE_PATH="coverage/backend$utils.coverage" NAME="utils 覆盖结果" MODIFIED="1701706692412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/extension/chaoxing" />
+    <SUITE FILE_PATH="coverage/backend$auth.coverage" NAME="auth 覆盖结果" MODIFIED="1701250700744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/api/endpoints" />
+    <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1701673920366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/extension/chaoxing/Searcher" />
+    <SUITE FILE_PATH="coverage/backend$server.coverage" NAME="server 覆盖结果" MODIFIED="1702281569524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main 覆盖结果" MODIFIED="1701187741374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backend$create_db.coverage" NAME="create_db 覆盖结果" MODIFIED="1701262779338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backend$database.coverage" NAME="database 覆盖结果" MODIFIED="1702283363432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:\coding\github\Chaoxing\backend" />
+  </component>
+</project>

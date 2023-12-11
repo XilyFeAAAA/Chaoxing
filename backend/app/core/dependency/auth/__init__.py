@@ -4,29 +4,22 @@ import time
 from http import HTTPStatus
 from typing import Annotated
 from starlette.requests import Request
-from datetime import datetime, timezone
 from fastapi import Depends, HTTPException, Body
-from fastapi.security import OAuth2PasswordBearer
 # local
 from app.models import User
 from app.common import constants
-from app.common.enums import MsgEnum
-from app.core.config import settings
 from app.core.security import check_token
 from app.modules.user import get_user_by_userid
 from app.modules.rbac import get_roles_with_permission
 from app.utils.string_helper import url_to_resource
 
 
-reusable_oauth2 = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.API_V1_STR}{settings.OAUTH2_PATH}"
-)
-
-
-async def login_required(token: Annotated[str, Depends(reusable_oauth2)]) -> User:
+async def login_required(request: Request) -> User:
     """dependency to check login state"""
+    token = request.cookies.get("access-token")
     payload = check_token(token)
-    user = await get_user_by_userid(payload["sub"])
+    if (user := await get_user_by_userid(payload["sub"])) is None:
+        raise HTTPException(status_code=HTTPStatus.UNAUTHORIZED.value, detail="invalid_token")
     return user
 
 
@@ -35,10 +28,11 @@ async def permission_required(request: Request, user: Annotated[User, Depends(lo
     auth = url_to_resource(request.url.path)
     method = request.method.upper()
     required_roles = await get_roles_with_permission(auth, method)
-    if user.role.name in [role.name for role in required_roles]:
+    print(required_roles)
+    if required_roles and user.role.name in [role.name for role in required_roles]:
         return user
     else:
-        raise HTTPException(status_code=HTTPStatus.FORBIDDEN)
+        raise HTTPException(status_code=HTTPStatus.FORBIDDEN.value)
 
 
 async def captcha_required(request: Request, captcha: Annotated[str, Body(description="captcha", embed=True)]):
@@ -49,9 +43,9 @@ async def captcha_required(request: Request, captcha: Annotated[str, Body(descri
         captcha = captcha.lower()
         stored_captcha = stored_captcha.lower()
     if stored_captcha is None or captcha != stored_captcha:
-        raise HTTPException(status_code=401, detail="invalid captcha")
+        raise HTTPException(status_code=401, detail="验证码错误")
     elif captcha_expire is None or time.time() > captcha_expire:
-        raise HTTPException(status_code=401, detail="expired captcha")
+        raise HTTPException(status_code=401, detail="验证码失效")
     else:
         request.session.pop("captcha")
         request.session.pop("captcha_expire")
